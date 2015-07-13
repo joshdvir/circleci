@@ -29,4 +29,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'vcr',       '~> 2.9.3',  '>= 2.9.3'
   s.add_development_dependency 'webmock',   '~> 1.21.0', '>= 1.21.0'
   s.add_development_dependency 'yard',      '~> 0.8.7',  '>= 0.8.7.6'
+  s.add_development_dependency 'awesome_print'
 end

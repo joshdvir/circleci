@@ -130,6 +130,20 @@ module CircleCi
       CircleCi.http.get "/project/#{username}/#{project}/settings"
     end
 
+    ##
+    #
+    # Set a project environment variable
+    #
+    # @param username [String] - User or org name who owns project
+    # @param project  [String] - Name of project
+    # @param name     [String] - Name of environment variable
+    # @param value  [String] - Value of environment variable
+    # @return         [CircleCi::Response] - Response object
+
+    def self.envvar username, project, name, value
+      CircleCi.http.post "/project/#{username}/#{project}/envvar", {}, { name: name, value: value }
+    end
+
   end
 
 end
